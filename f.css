@@ -1,0 +1,92 @@
+* {
+    margin: 2px;
+    padding: 0%
+}
+
+body {
+    font-size: 20px;
+}
+
+.left-img {
+    display: inline-block;
+    width: 250px;
+    height: 320px;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: center;
+}
+
+.left-img p {
+    margin-top: 80px;
+    vertical-align: middle;
+}
+
+.right-text {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+input[type=text],
+[type=search],
+[type=number],
+[type=email] {
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    width: 300px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.rbtn {
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.table {
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.table table,
+td,
+th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+.exp {
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: auto;
+}
+
+.table2 table,
+td,
+th {
+    border: 1px solid #000000;
+    text-align: left;
+    border-collapse: collapse;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+
+#gap {
+    width: 80%;
+    display: inline;
+}
