@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
     <link rel="stylesheet" href="f.css">
     <title>form</title>
 </head>
@@ -22,37 +23,45 @@
         <hr> </nav>
 
     <div class="container">
-        <form action="">
+        <form action="#" name="myForm" id="form" onsubmit="return myfun()">
             <div class="main">
                 <div class="left-img">
                     <p>Affix your recent, coloured, passport size photograph</p>
                 </div>
                 <div class="right-text">
-                    <label for="date">Date</label>
-                    <input type="date" name="Date" id="date">
-                    <label for="position">Position Applied: 
-                        <input type="text" id="position"></label><br>
-                    <label for="full"> Full Name :
-                        <input type="text" id="full"></label><br>
-                    <label for="date">Date Of Birth :  </label>
-                    <input type="date" name="Date" id="date">
-                    <label for="place"> Native Place  : 
-                        <input type="search" name="place" id="place"></label><br>
-                    <label for="Gender">Gender :
-                        <input type="radio" name="gender" value="male" id="mRadio"> Male
-                        <input type="radio" name="gender" value="female" id="fRadio">Female</label>
+                    <label for="date" style="padding-right: 60px;">Date :
+                    <input type="date" name="Date" id="date1"required></label>
+                    <div class="form-control">
+                        <label for="position">Position Applied: 
+                        <input type="text" id="position"required></label>
+                        <b><span class="formerror"><small> *error msg</small></span></b><br></div>
+                    <div class="form-control">
+                        <label for="full"> Full Name :
+                        <input type="text" id="full"required></label>
+                        <b><span class="formerror"><small> *error msg</small></span></b><br></div>
+                    <label for="date">Date of Birth:</label>
+                    <input type="date" name="date" id="date"> <span id="vali"> </span>
+                    <div class="form-control"> <label for="place"> Native Place  : 
+                        <input type="search" name="place" id="place" required></label> <b><span class="formerror"><small> *error msg</small></span></b><br></div>
+                    <label for="Gender" style="padding-right: 60px;">Gender :
+                        <input type="radio" name="gender" value="male" id="mRadio" required> Male
+                        <input type="radio" name="gender" value="female" id="fRadio" required>Female</label>
                     <label for="Gender">Martial-Status :
-                            <input type="radio" name="martial" value="married" id="married"> Married
-                            <input type="radio" name="martial" value="umnarried" id="umnarried">Umnarried
-                        <input type="radio" name="martial" value="widow" id="widow">Widow</label><br>
-                    <label for="mphone">Mobile Number :</label>
-                    <input type="number" name="phone" id="mphone">
+                            <input type="radio" name="martial" value="married" id="married" required> Married
+                            <input type="radio" name="martial" value="umnarried" id="umnarried" required>Umnarried
+                        <input type="radio" name="martial" value="widow" id="widow" required>Widow</label><br>
+
+                    <label for="num">Number</label>
+                    <input type="number" name="num" id="num"><span id="val"></span>
+
                     <label for="place"> Current Location : 
-                            <input type="search" name="place" id="place"></label><br>
+                            <input type="search" name="place" id="place" required></label><br>
+
                     <label for="email">Email : </label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" class="form-control" required><span id="valid"></span>
+
                     <label for="address">Address :
-                            <input type="text">
+                            <input type="text" required>
                         </label><br>
                     <div class="rbtn">
                         <div class="rbtn1">
@@ -188,65 +197,65 @@
         <label for="full"> Notice period :
                                                     <input type="text" id="full"></label>
     </div>
-    <center>
-        <div class="table2">
-            <table>
-                <tr>
-                    <th>FROM</th>
-                    <th>TO</th>
-                    <th>ORGANISATION</th>
-                    <th>DESIGNATION</th>
-                    <th>REASON FOR LEAVING</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+    <div class="table2">
+        <table>
+            <tr>
+                <th>FROM <br><small>(Month, year)</small></th>
+                <th>TO <br><small>(Month, year)</small></th>
+                <th>ORGANISATION <br><small>Please begin with your present organisation details</small></th>
+                <th>DESIGNATION</th>
+                <th>REASON FOR LEAVING</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
 
 
-            </table>
-        </div>
-    </center>
+        </table>
+    </div>
+
     <label for="gap">Please mention career gap, if any:</label>
     <input type="text" id="gap">
+    <input type="submit" value="submit" id="sub" name="sub">
     </form>
 
     </main>
 
+    <script src="index.js"></script>
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI1g5yVwY513vqPx4wXXzdyqBOhZNrMMY&libraries=places&callback=initMap">
-    </script>
 </body>
 
 </html>
